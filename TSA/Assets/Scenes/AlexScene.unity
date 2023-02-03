@@ -354,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303363408}
   - component: {fileID: 1303363409}
+  - component: {fileID: 1303363410}
   m_Layer: 7
   m_Name: Bruce
   m_TagString: Untagged
@@ -426,6 +427,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1303363410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303363407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273bd878609acd34781156364e64c191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  jump: 1
+  jumpForce: 5
 --- !u!1 &1452856555
 GameObject:
   m_ObjectHideFlags: 0

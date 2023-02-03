@@ -6,7 +6,7 @@ public class Player2 : MonoBehaviour
 {
     public float speed = 3.0f;
     public bool jump = true;
-    public float jumpForce = 3.0f;
+    public float jumpForce = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
