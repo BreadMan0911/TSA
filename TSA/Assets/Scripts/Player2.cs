@@ -7,27 +7,30 @@ public class Player2 : MonoBehaviour
     public float speed = 3.0f;
     public bool jump = true;
     public float jumpForce = 5.0f;
+    public int health = 1;
+    int currentHealth;
+    public Transform respawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = health;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))  
-        {
-                 transform.Translate(Vector2.left * Time.deltaTime * speed);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-                transform.Translate(Vector2.right * Time.deltaTime * speed);
-        }
-        if (Input.GetKey(KeyCode.UpArrow) && jump != false)
-        {
-                transform.Translate(Vector2.up * Time.deltaTime * jumpForce);
-        }
+         if (Input.GetKey(KeyCode.LeftArrow))  
+         {
+             transform.Translate(Vector2.left * Time.deltaTime * speed);
+         }
+         if (Input.GetKey(KeyCode.RightArrow))
+         {
+             transform.Translate(Vector2.right * Time.deltaTime * speed);
+         }
+         if (Input.GetKey(KeyCode.UpArrow) && jump != false)
+         {
+             transform.Translate(Vector2.up * Time.deltaTime * jumpForce);
+         }
     }
     void OnCollisionEnter(Collision other)
     {
@@ -42,5 +45,20 @@ public class Player2 : MonoBehaviour
         {
             jump = false;
         }
+    }
+    public void ChangeHealth(int amount) 
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, health);
+        Debug.Log("Game Over!");
+        if (amount < 0)
+        {
+            if(currentHealth == 0)
+            Respawn();
+        }
+    }
+    void Respawn()
+    {
+        ChangeHealth(health);
+        transform.position = respawnPosition.position;
     }
 }

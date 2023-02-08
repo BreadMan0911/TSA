@@ -7,10 +7,13 @@ public class Player1 : MonoBehaviour
     public float speed = 3.0f;
     public bool jump = true;
     public float jumpForce = 5.0f;
+    public int health = 1;
+    int currentHealth;
+    public Transform respawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = health;
     }
 
     // Update is called once per frame
@@ -42,5 +45,20 @@ public class Player1 : MonoBehaviour
         {
             jump = false;
         }
+    }
+    public void ChangeHealth(int amount) 
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, health);
+        Debug.Log("Game Over!");
+        if (amount < 0)
+        {
+            if(currentHealth == 0)
+            Respawn();
+        }
+    }
+    void Respawn()
+    {
+        ChangeHealth(health);
+        transform.position = respawnPosition.position;
     }
 }
