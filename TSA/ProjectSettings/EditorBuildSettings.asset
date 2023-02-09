@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HunnerScene.unity
+    guid: d96cc22322a5f2b4887f3bbb63ba2d76
+  - enabled: 1
+    path: Assets/Scenes/DylanScene.unity
+    guid: 6bde20a01b4deea43896893520593019
+  - enabled: 1
+    path: Assets/Scenes/AlexScene.unity
+    guid: 042538a049401ca4c96ecabf51f2b90f
   m_configObjects: {}
