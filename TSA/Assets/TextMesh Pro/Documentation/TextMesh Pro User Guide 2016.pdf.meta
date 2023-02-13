@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:TSA/Assets/Prefabs.meta
+guid: 8added090e09aec4c91cc9564fdc4989
+folderAsset: yes
+========
 guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+>>>>>>>> 93d3f62f6de86aeb73b04ef4d0af881fe38f4d32:TSA/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
