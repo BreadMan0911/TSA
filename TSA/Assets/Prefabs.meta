@@ -1,6 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:TSA/Assets/Prefabs.meta
 guid: 494f0f5bd2bb8d246852fc1cf133e69f
 folderAsset: yes
+========
+guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+>>>>>>>> 93d3f62f6de86aeb73b04ef4d0af881fe38f4d32:TSA/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+=======
+<<<<<<<< HEAD:TSA/Assets/Prefabs/Materials.meta
+guid: 1f69b664ba3d43c4290404d7c885c965
+========
+guid: 69f89bd192fc57b42ab2241985522322
+>>>>>>>> 93d3f62f6de86aeb73b04ef4d0af881fe38f4d32:TSA/Assets/Prefabs.meta
+folderAsset: yes
+>>>>>>> 93d3f62f6de86aeb73b04ef4d0af881fe38f4d32
 DefaultImporter:
   externalObjects: {}
   userData: 
