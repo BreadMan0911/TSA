@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HunnerScene.unity
     guid: d96cc22322a5f2b4887f3bbb63ba2d76
+  - enabled: 1
+    path: Assets/Scenes/JainaScene.unity
+    guid: e846446a04a7fdc40b96f8deb9e191e9
   m_configObjects: {}

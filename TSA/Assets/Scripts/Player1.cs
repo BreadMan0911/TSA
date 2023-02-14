@@ -49,7 +49,6 @@ public class Player1 : MonoBehaviour
     public void ChangeHealth(int amount) 
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, health);
-        Debug.Log("Game Over!");
         if (amount < 0)
         {
             if(currentHealth == 0)
