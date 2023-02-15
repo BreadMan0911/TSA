@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2 : MonoBehaviour
+public class Battle3 : MonoBehaviour
 {
     public float speed = 3.0f;
     public bool jump = true;
@@ -10,6 +10,7 @@ public class Player2 : MonoBehaviour
     public int health = 1;
     int currentHealth;
     public Transform respawnPosition;
+    public bool gameOver = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +20,15 @@ public class Player2 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-         if (Input.GetKey(KeyCode.LeftArrow))  
+         if (Input.GetKey(KeyCode.J))  
          {
              transform.Translate(Vector2.left * Time.deltaTime * speed);
          }
-         if (Input.GetKey(KeyCode.RightArrow))
+         if (Input.GetKey(KeyCode.L))
          {
              transform.Translate(Vector2.right * Time.deltaTime * speed);
          }
-         if (Input.GetKey(KeyCode.UpArrow) && jump != false)
+         if (Input.GetKey(KeyCode.I) && jump != false)
          {
              transform.Translate(Vector2.up * Time.deltaTime * jumpForce);
          }
@@ -49,16 +50,10 @@ public class Player2 : MonoBehaviour
     public void ChangeHealth(int amount) 
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, health);
-        Debug.Log("Game Over!");
         if (amount < 0)
         {
-           
-            Respawn();
+            if(currentHealth == 0)
+            gameOver = true;
         }
-    }
-    void Respawn()
-    {
-        ChangeHealth(health);
-        transform.position = respawnPosition.position;
     }
 }
