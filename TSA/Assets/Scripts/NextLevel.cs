@@ -19,7 +19,7 @@ public class NextLevel : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Load1 controller = other.GetComponent<Load1>();
-            SceneManager.LoadScene("DylanScene");
+            SceneManager.LoadScene("JainaScene");
 
         }
     }
