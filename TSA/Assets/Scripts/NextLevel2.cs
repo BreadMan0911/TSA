@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLeve2 : MonoBehaviour
+public class NextLevel2 : MonoBehaviour
 {
     
     // Start is called before the first frame update
