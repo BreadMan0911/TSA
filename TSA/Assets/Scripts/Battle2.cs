@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2 : MonoBehaviour
+public class Battle2 : MonoBehaviour
 {
     public float speed = 3.0f;
     public bool jump = true;
@@ -10,6 +10,7 @@ public class Player2 : MonoBehaviour
     public int health = 1;
     int currentHealth;
     public Transform respawnPosition;
+    public bool gameOver = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +53,7 @@ public class Player2 : MonoBehaviour
         Debug.Log("Game Over!");
         if (amount < 0)
         {
-           
+            if(currentHealth == 0)
             Respawn();
         }
     }
