@@ -51,7 +51,6 @@ public class Player1 : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, health);
         if (amount < 0)
         {
-            
             Respawn();
         }
     }
